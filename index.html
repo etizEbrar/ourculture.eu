@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Our Culture — a European youth cooperation project connecting heritage and digital learning across France, Turkey and Hungary." />
+  <meta name="theme-color" content="#1B3A6B" />
+  <title data-i18n="meta.title">Our Culture — European Youth Project</title>
+
+  <link rel="icon" type="image/png" href="images/logo-ourculture.png" />
+  <link rel="stylesheet" href="style.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700;800;900&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to main content</a>
+
+  <!-- ══════════════════════════════════════════════════════════
+       TOP BAR (thin utility strip)
+  ══════════════════════════════════════════════════════════ -->
+  <div class="topbar">
+    <div class="topbar-inner">
+      <span class="topbar-item">
+        <span class="topbar-dot" aria-hidden="true"></span>
+        <span data-i18n="topbar.funded">Co-funded by the European Union</span>
+      </span>
+      <span class="topbar-item topbar-right" data-i18n="topbar.tagline">Youth · Culture · Digital learning</span>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════
+       HEADER / STICKY NAVIGATION
+  ══════════════════════════════════════════════════════════ -->
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+
+      <a href="#home" class="brand" aria-label="Our Culture — home">
+        <img src="images/logo-ourculture.png" alt="Our Culture" class="brand-logo" />
+      </a>
+
+      <button
+        class="nav-toggle"
+        id="nav-toggle"
+        aria-controls="primary-nav"
+        aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav id="primary-nav" class="primary-nav" aria-label="Primary">
+        <ul>
+          <li><a href="#home"      class="nav-link" data-i18n="nav.home">Home</a></li>
+          <li><a href="#news"      class="nav-link" data-i18n="nav.news">News</a></li>
+          <li><a href="#partners"  class="nav-link" data-i18n="nav.partners">Project Partners</a></li>
+          <li><a href="#resources" class="nav-link" data-i18n="nav.resources">Resources</a></li>
+          <li><a href="#exhibition" class="nav-link nav-link-accent" data-i18n="nav.exhibition">Digital Exhibition Platform</a></li>
+          <li><a href="#contact"   class="nav-link" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+
+        <div class="lang-switcher" role="group" aria-label="Language selection">
+          <button class="lang-btn" type="button" aria-haspopup="listbox" aria-expanded="false" id="lang-trigger">
+            <span class="lang-flag" aria-hidden="true">🇬🇧</span>
+            <span class="lang-label" id="lang-current">EN</span>
+            <svg class="lang-caret" width="10" height="6" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <ul class="lang-menu" id="lang-menu" role="listbox" aria-labelledby="lang-trigger">
+            <li role="option" data-lang="en"><span class="lang-flag">🇬🇧</span> English</li>
+            <li role="option" data-lang="fr"><span class="lang-flag">🇫🇷</span> Français</li>
+            <li role="option" data-lang="tr"><span class="lang-flag">🇹🇷</span> Türkçe</li>
+            <li role="option" data-lang="hu"><span class="lang-flag">🇭🇺</span> Magyar</li>
+          </ul>
+        </div>
+      </nav>
+
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ══════════════════════════════════════════════════════════
+         HERO — visually rich, image-driven
+    ══════════════════════════════════════════════════════════ -->
+    <section id="home" class="hero">
+      <div class="hero-media" aria-hidden="true">
+        <img
+          class="hero-photo"
+          src="images/ana-sayfa-foto.jpg"
+          alt=""
+          loading="eager"
+          decoding="async" />
+        <div class="hero-overlay"></div>
+        <svg class="hero-pattern" viewBox="0 0 600 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <defs>
+            <pattern id="dots" x="0" y="0" width="24" height="24" patternUnits="userSpaceOnUse">
+              <circle cx="2" cy="2" r="1.3" fill="#ffffff" fill-opacity=".12"/>
+            </pattern>
+          </defs>
+          <rect width="600" height="600" fill="url(#dots)"/>
+        </svg>
+        <span class="hero-blob hero-blob-a"></span>
+        <span class="hero-blob hero-blob-b"></span>
+      </div>
+
+      <div class="container hero-inner">
+        <p class="eyebrow eyebrow-on-dark" data-i18n="hero.eyebrow">A European Youth Project</p>
+        <h1 class="hero-title" data-i18n="hero.title">Our Culture</h1>
+        <p class="hero-tagline" data-i18n="hero.tagline">Heritage meets digital learning.</p>
+        <p class="hero-desc" data-i18n="hero.description">
+          A cooperative project bringing young people together across France, Turkey and Hungary to explore cultural heritage through creativity, storytelling and digital skills.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#exhibition" class="btn btn-cta">
+            <span data-i18n="hero.cta_primary">Visit the Digital Exhibition Platform</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+          <a href="#partners" class="btn btn-ghost-light" data-i18n="hero.cta_secondary">Meet the partners</a>
+        </div>
+
+        <dl class="hero-stats" aria-label="Project at a glance">
+          <div class="hero-stat">
+            <dt data-i18n="hero.stat1_label">Countries</dt>
+            <dd><span>3</span></dd>
+          </div>
+          <div class="hero-stat">
+            <dt data-i18n="hero.stat2_label">Languages</dt>
+            <dd><span>4</span></dd>
+          </div>
+          <div class="hero-stat">
+            <dt data-i18n="hero.stat3_label">Vision</dt>
+            <dd><span data-i18n="hero.stat3_value">Shared</span></dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════
+         INTRO / ABOUT SNAPSHOT
+    ══════════════════════════════════════════════════════════ -->
+    <section id="about" class="section section-intro">
+      <div class="container intro-grid">
+
+        <div class="intro-media">
+          <div class="intro-img-frame">
+            <img src="https://picsum.photos/seed/ourculture-intro-culture/1000/1200" alt="" loading="lazy" />
+          </div>
+          <div class="intro-img-frame intro-img-frame-2">
+            <img src="https://picsum.photos/seed/ourculture-intro-youth/900/700" alt="" loading="lazy" />
+          </div>
+          <span class="intro-sticker" aria-hidden="true">
+            <svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="58" fill="#E37625"/><text x="60" y="55" text-anchor="middle" font-family="Playfair Display, serif" font-size="16" font-weight="700" fill="#fff">OUR</text><text x="60" y="74" text-anchor="middle" font-family="Playfair Display, serif" font-size="16" font-weight="700" fill="#fff">CULTURE</text></svg>
+          </span>
+        </div>
+
+        <div class="intro-text">
+          <p class="section-tag" data-i18n="about.tag">About the project</p>
+          <h2 class="section-title" data-i18n="about.title">Culture, creativity and digital skills</h2>
+          <p class="section-lead" data-i18n="about.lead">
+            Our Culture invites young people to discover, document and share the cultural heritage that shapes their communities — using today's digital tools as a bridge between generations.
+          </p>
+
+          <ul class="intro-bullets">
+            <li>
+              <span class="bullet-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19V5a2 2 0 012-2h9l5 5v11a2 2 0 01-2 2H6a2 2 0 01-2-2z"/><path d="M14 3v5h5"/></svg>
+              </span>
+              <div>
+                <h3 data-i18n="about.card1_title">Digital literacy</h3>
+                <p data-i18n="about.card1_text">Helping young people navigate online spaces confidently, safely and creatively.</p>
+              </div>
+            </li>
+            <li>
+              <span class="bullet-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16v12H5.5L4 18V4z"/></svg>
+              </span>
+              <div>
+                <h3 data-i18n="about.card2_title">Cultural storytelling</h3>
+                <p data-i18n="about.card2_text">Turning traditions, places and people into stories worth hearing — through audio, video and text.</p>
+              </div>
+            </li>
+            <li>
+              <span class="bullet-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14 0 18M12 3c-3 3.5-3 14 0 18"/></svg>
+              </span>
+              <div>
+                <h3 data-i18n="about.card3_title">Creative exchange</h3>
+                <p data-i18n="about.card3_text">Connecting youth across borders to share culture, ideas and new ways of learning together.</p>
+              </div>
+            </li>
+          </ul>
+
+          <a href="#partners" class="btn btn-primary" data-i18n="about.cta">Meet the people behind the project</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════
+         HIGHLIGHTS BAND
+    ══════════════════════════════════════════════════════════ -->
+    <section class="highlights" aria-label="Project highlights">
+      <div class="container highlights-grid">
+        <div class="highlight">
+          <span class="highlight-num">3</span>
+          <span class="highlight-label" data-i18n="highlights.countries">Partner countries</span>
+        </div>
+        <div class="highlight">
+          <span class="highlight-num">4</span>
+          <span class="highlight-label" data-i18n="highlights.languages">Working languages</span>
+        </div>
+        <div class="highlight">
+          <span class="highlight-num">∞</span>
+          <span class="highlight-label" data-i18n="highlights.stories">Stories to share</span>
+        </div>
+        <div class="highlight">
+          <span class="highlight-num">1</span>
+          <span class="highlight-label" data-i18n="highlights.vision">Shared vision</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════
+         NEWS
+    ══════════════════════════════════════════════════════════ -->
+    <section id="news" class="section section-news">
+      <div class="container">
+        <header class="section-head section-head-split">
+          <div>
+            <p class="section-tag" data-i18n="news.tag">News</p>
+            <h2 class="section-title" data-i18n="news.title">Latest from the project</h2>
+          </div>
+          <p class="section-lead" data-i18n="news.lead">
+            Moments, milestones and voices from the Our Culture community across France, Turkey and Hungary.
+          </p>
+        </header>
+
+        <div class="news-grid">
+
+          <article class="news-card news-card-feature">
+            <a class="news-media" href="#news">
+              <img src="https://picsum.photos/seed/ourculture-news-01/1200/800" alt="" loading="lazy" />
+              <span class="news-tag" data-i18n="news.cat_launch">Launch</span>
+            </a>
+            <div class="news-body">
+              <p class="news-meta">
+                <span data-i18n="news.n1_date">Spring 2026</span>
+                <span class="news-dot" aria-hidden="true">•</span>
+                <span data-i18n="news.n1_place">Paris, France</span>
+              </p>
+              <h3 class="news-title" data-i18n="news.n1_title">Our Culture officially kicks off in Paris</h3>
+              <p class="news-excerpt" data-i18n="news.n1_text">
+                Partners from France, Turkey and Hungary meet to share their vision and set the creative direction for the project's first year together.
+              </p>
+              <a href="#news" class="news-link" data-i18n="news.read_more">Read more →</a>
+            </div>
+          </article>
+
+          <article class="news-card">
+            <a class="news-media" href="#news">
+              <img src="https://picsum.photos/seed/ourculture-news-02/900/600" alt="" loading="lazy" />
+              <span class="news-tag news-tag-2" data-i18n="news.cat_voices">Voices</span>
+            </a>
+            <div class="news-body">
+              <p class="news-meta">
+                <span data-i18n="news.n2_date">Upcoming</span>
+                <span class="news-dot" aria-hidden="true">•</span>
+                <span data-i18n="news.n2_place">Mersin, Türkiye</span>
+              </p>
+              <h3 class="news-title" data-i18n="news.n2_title">Young voices from the Mediterranean</h3>
+              <p class="news-excerpt" data-i18n="news.n2_text">
+                Young participants explore how the sea, the city and their families have shaped their cultural identity.
+              </p>
+              <a href="#news" class="news-link" data-i18n="news.read_more">Read more →</a>
+            </div>
+          </article>
+
+          <article class="news-card">
+            <a class="news-media" href="#news">
+              <img src="https://picsum.photos/seed/ourculture-news-03/900/600" alt="" loading="lazy" />
+              <span class="news-tag news-tag-3" data-i18n="news.cat_workshop">Workshop</span>
+            </a>
+            <div class="news-body">
+              <p class="news-meta">
+                <span data-i18n="news.n3_date">Soon</span>
+                <span class="news-dot" aria-hidden="true">•</span>
+                <span data-i18n="news.n3_place">Budapest, Hungary</span>
+              </p>
+              <h3 class="news-title" data-i18n="news.n3_title">Digital storytelling workshops in Budapest</h3>
+              <p class="news-excerpt" data-i18n="news.n3_text">
+                A creative week of podcasting, photography and storytelling inspired by Hungarian heritage and youth culture.
+              </p>
+              <a href="#news" class="news-link" data-i18n="news.read_more">Read more →</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════
+         DIGITAL EXHIBITION PLATFORM — FEATURED
+    ══════════════════════════════════════════════════════════ -->
+    <section id="exhibition" class="section section-exhibition">
+      <div class="exhibition-bg" aria-hidden="true">
+        <img src="https://picsum.photos/seed/ourculture-exhibition-gallery/2000/1200" alt="" loading="lazy" />
+        <div class="exhibition-overlay"></div>
+      </div>
+
+      <div class="container exhibition-grid">
+        <div class="exhibition-text">
+          <p class="section-tag section-tag-light" data-i18n="exhibition.tag">Featured</p>
+          <h2 class="section-title section-title-light" data-i18n="exhibition.title">Digital Exhibition Platform</h2>
+          <p class="section-lead section-lead-light" data-i18n="exhibition.lead">
+            A growing online space where young people share the cultural heritage of their regions — podcasts, short films, photo stories and more, open to everyone.
+          </p>
+
+          <ul class="exhibition-bullets">
+            <li><span class="check" aria-hidden="true">✓</span><span data-i18n="exhibition.b1">Stories from France, Turkey and Hungary</span></li>
+            <li><span class="check" aria-hidden="true">✓</span><span data-i18n="exhibition.b2">Audio, video, photo and written creations</span></li>
+            <li><span class="check" aria-hidden="true">✓</span><span data-i18n="exhibition.b3">Freely accessible to young people and educators</span></li>
+          </ul>
+
+          <div class="exhibition-cta">
+            <a href="#" class="btn btn-cta btn-cta-large">
+              <span data-i18n="exhibition.cta">Enter the Digital Exhibition</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            </a>
+            <p class="exhibition-note" data-i18n="exhibition.note">
+              Launching soon — a public cultural archive created by and for youth.
+            </p>
+          </div>
+        </div>
+
+        <div class="exhibition-preview" aria-hidden="true">
+          <div class="exhibition-preview-frame">
+            <div class="exhibition-preview-head">
+              <span></span><span></span><span></span>
+              <p class="exhibition-preview-url">ourculture.eu / exhibition</p>
+            </div>
+            <div class="exhibition-preview-grid">
+              <div class="tile tile-1" style="background-image:url('https://picsum.photos/seed/ourculture-tile-01/500/500')"></div>
+              <div class="tile tile-2" style="background-image:url('https://picsum.photos/seed/ourculture-tile-02/500/500')"></div>
+              <div class="tile tile-3" style="background-image:url('https://picsum.photos/seed/ourculture-tile-03/500/500')"></div>
+              <div class="tile tile-4" style="background-image:url('https://picsum.photos/seed/ourculture-tile-04/500/500')"></div>
+              <div class="tile tile-5" style="background-image:url('https://picsum.photos/seed/ourculture-tile-05/500/500')"></div>
+              <div class="tile tile-6" style="background-image:url('https://picsum.photos/seed/ourculture-tile-06/500/500')"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════
+         PROJECT PARTNERS
+    ══════════════════════════════════════════════════════════ -->
+    <section id="partners" class="section section-partnership">
+      <div class="container">
+        <header class="section-head">
+          <p class="section-tag" data-i18n="partnership.tag">Project Partners</p>
+          <h2 class="section-title" data-i18n="partnership.title">Three countries, one shared vision</h2>
+          <p class="section-lead" data-i18n="partnership.lead">
+            Our Culture is built by a small consortium of organisations who share a belief in the power of youth, culture and collaboration.
+          </p>
+        </header>
+
+        <div class="partners-grid">
+
+          <article class="partner-card">
+            <div class="partner-banner partner-banner-fr" aria-hidden="true"></div>
+            <div class="partner-logo">
+              <img src="images/logo-eutopique.png" alt="eutopique" />
+            </div>
+            <p class="partner-country" data-i18n="partnership.p1_country">France</p>
+            <h3 class="partner-name" data-i18n="partnership.p1_name">eutopique</h3>
+            <p class="partner-desc" data-i18n="partnership.p1_desc">
+              A French non-profit working at the intersection of education, creativity and social innovation, with a focus on meaningful learning experiences for young people.
+            </p>
+            <span class="partner-chip" data-i18n="partnership.p1_role">Coordinator</span>
+          </article>
+
+          <article class="partner-card">
+            <div class="partner-banner partner-banner-tr" aria-hidden="true"></div>
+            <div class="partner-logo">
+              <img src="images/logo-akdeniz.png" alt="Akdeniz Panorama Derneği" />
+            </div>
+            <p class="partner-country" data-i18n="partnership.p2_country">Turkey</p>
+            <h3 class="partner-name" data-i18n="partnership.p2_name">Akdeniz Panorama Derneği</h3>
+            <p class="partner-desc" data-i18n="partnership.p2_desc">
+              A Turkish association promoting education, inclusion and cultural dialogue, with a strong interest in media, environment and youth engagement.
+            </p>
+            <span class="partner-chip" data-i18n="partnership.p2_role">Partner</span>
+          </article>
+
+          <article class="partner-card">
+            <div class="partner-banner partner-banner-hu" aria-hidden="true"></div>
+            <div class="partner-logo">
+              <img src="images/logo-fiatalok.png" alt="Fiatalok Egységben Egyesület — Youth Together Association" />
+            </div>
+            <p class="partner-country" data-i18n="partnership.p3_country">Hungary</p>
+            <h3 class="partner-name" data-i18n="partnership.p3_name">Fiatalok Egységben Egyesület</h3>
+            <p class="partner-desc" data-i18n="partnership.p3_desc">
+              A Hungarian youth association fostering intercultural understanding, active participation and creative youth work across Europe.
+            </p>
+            <span class="partner-chip" data-i18n="partnership.p3_role">Partner</span>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════
+         RESOURCES
+    ══════════════════════════════════════════════════════════ -->
+    <section id="resources" class="section section-resources">
+      <div class="container">
+        <header class="section-head">
+          <p class="section-tag" data-i18n="resources.tag">Resources</p>
+          <h2 class="section-title" data-i18n="resources.title">Open tools for youth and educators</h2>
+          <p class="section-lead" data-i18n="resources.lead">
+            As the project progresses, educational materials and youth-created content will be shared openly on this page.
+          </p>
+        </header>
+
+        <div class="resources-grid">
+          <article class="resource-card">
+            <div class="resource-media" style="background-image:url('https://picsum.photos/seed/ourculture-res-guide/800/500')"></div>
+            <div class="resource-body">
+              <span class="resource-icon" aria-hidden="true">📘</span>
+              <h3 class="resource-title" data-i18n="resources.r1_title">Educational guide</h3>
+              <p class="resource-text" data-i18n="resources.r1_text">A practical resource for youth workers on culture, creativity and digital skills.</p>
+              <span class="resource-status" data-i18n="resources.coming_soon">Coming soon</span>
+            </div>
+          </article>
+
+          <article class="resource-card">
+            <div class="resource-media" style="background-image:url('https://picsum.photos/seed/ourculture-res-audio/800/500')"></div>
+            <div class="resource-body">
+              <span class="resource-icon" aria-hidden="true">🎧</span>
+              <h3 class="resource-title" data-i18n="resources.r2_title">Audio & video stories</h3>
+              <p class="resource-text" data-i18n="resources.r2_text">Short creations by young people sharing the heritage of their regions.</p>
+              <span class="resource-status" data-i18n="resources.coming_soon">Coming soon</span>
+            </div>
+          </article>
+
+          <article class="resource-card">
+            <div class="resource-media" style="background-image:url('https://picsum.photos/seed/ourculture-res-map/800/500')"></div>
+            <div class="resource-body">
+              <span class="resource-icon" aria-hidden="true">🗺️</span>
+              <h3 class="resource-title" data-i18n="resources.r3_title">Cultural map</h3>
+              <p class="resource-text" data-i18n="resources.r3_text">An interactive space to explore stories from France, Turkey and Hungary.</p>
+              <span class="resource-status" data-i18n="resources.coming_soon">Coming soon</span>
+            </div>
+          </article>
+
+          <article class="resource-card">
+            <div class="resource-media" style="background-image:url('https://picsum.photos/seed/ourculture-res-news/800/500')"></div>
+            <div class="resource-body">
+              <span class="resource-icon" aria-hidden="true">📰</span>
+              <h3 class="resource-title" data-i18n="resources.r4_title">Project updates</h3>
+              <p class="resource-text" data-i18n="resources.r4_text">News, events and stories from the Our Culture community.</p>
+              <span class="resource-status" data-i18n="resources.coming_soon">Coming soon</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════
+         NEWSLETTER / JOIN BAND
+    ══════════════════════════════════════════════════════════ -->
+    <section class="join-band" aria-label="Stay in touch">
+      <div class="container join-band-inner">
+        <div class="join-text">
+          <h2 data-i18n="join.title">Stay in the loop</h2>
+          <p data-i18n="join.lead">Receive project updates, stories and open resources directly in your inbox.</p>
+        </div>
+        <form class="join-form" id="join-form" novalidate>
+          <label class="visually-hidden" for="join-email" data-i18n="join.email_label">Your email</label>
+          <input
+            type="email"
+            id="join-email"
+            name="email"
+            required
+            placeholder="you@example.com" />
+          <button type="submit" class="btn btn-cta" data-i18n="join.submit">Subscribe</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════
+         CONTACT
+    ══════════════════════════════════════════════════════════ -->
+    <section id="contact" class="section section-contact">
+      <div class="container contact-grid">
+
+        <div class="contact-intro">
+          <p class="section-tag" data-i18n="contact.tag">Contact</p>
+          <h2 class="section-title" data-i18n="contact.title">Get in touch</h2>
+          <p class="section-lead" data-i18n="contact.lead">
+            We are happy to hear from young people, youth workers, educators and organisations interested in the project.
+          </p>
+
+          <ul class="contact-list">
+            <li>
+              <span class="contact-key" data-i18n="contact.email_label">Email</span>
+              <a href="mailto:hello@ourculture.eu">hello@ourculture.eu</a>
+            </li>
+            <li>
+              <span class="contact-key" data-i18n="contact.website_label">Website</span>
+              <a href="https://ourculture.eu">ourculture.eu</a>
+            </li>
+            <li>
+              <span class="contact-key" data-i18n="contact.follow_label">Follow</span>
+              <span class="social-row">
+                <a href="#" aria-label="Instagram" class="social-link">IG</a>
+                <a href="#" aria-label="Facebook"  class="social-link">FB</a>
+                <a href="#" aria-label="LinkedIn"  class="social-link">in</a>
+                <a href="#" aria-label="YouTube"   class="social-link">YT</a>
+              </span>
+            </li>
+          </ul>
+        </div>
+
+        <form class="contact-form" id="contact-form" novalidate>
+          <div class="form-row">
+            <label for="cf-name" data-i18n="contact.form_name">Name</label>
+            <input type="text" id="cf-name" name="name" required autocomplete="name" />
+          </div>
+          <div class="form-row">
+            <label for="cf-email" data-i18n="contact.form_email">Email</label>
+            <input type="email" id="cf-email" name="email" required autocomplete="email" />
+          </div>
+          <div class="form-row">
+            <label for="cf-subject" data-i18n="contact.form_subject">Subject</label>
+            <input type="text" id="cf-subject" name="subject" />
+          </div>
+          <div class="form-row">
+            <label for="cf-message" data-i18n="contact.form_message">Message</label>
+            <textarea id="cf-message" name="message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block" data-i18n="contact.form_submit">Send message</button>
+          <p class="form-feedback" id="form-feedback" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══════════════════════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════════════════════ -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+
+      <div class="footer-col footer-brand">
+        <img src="images/logo-ourculture.png" alt="Our Culture" class="footer-logo" />
+        <p class="footer-desc" data-i18n="footer.desc">
+          A European youth cooperation project connecting culture, creativity and digital learning.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-title" data-i18n="footer.explore">Explore</h4>
+        <ul>
+          <li><a href="#home"       data-i18n="nav.home">Home</a></li>
+          <li><a href="#news"       data-i18n="nav.news">News</a></li>
+          <li><a href="#partners"   data-i18n="nav.partners">Project Partners</a></li>
+          <li><a href="#resources"  data-i18n="nav.resources">Resources</a></li>
+          <li><a href="#exhibition" data-i18n="nav.exhibition">Digital Exhibition Platform</a></li>
+          <li><a href="#contact"    data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-title" data-i18n="footer.legal">Legal</h4>
+        <ul>
+          <li><a href="#" data-i18n="footer.privacy">Privacy Policy</a></li>
+          <li><a href="#" data-i18n="footer.cookies">Cookie Notice</a></li>
+          <li><a href="#" data-i18n="footer.credits">Credits</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-title" data-i18n="footer.partners">Partners</h4>
+        <div class="footer-partners">
+          <img src="images/logo-eutopique.png"  alt="eutopique" />
+          <img src="images/logo-akdeniz.png"    alt="Akdeniz Panorama Derneği" />
+          <img src="images/logo-fiatalok.png"   alt="Fiatalok Egységben Egyesület" />
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-eu">
+      <div class="container footer-eu-inner">
+        <div class="eu-flag" aria-hidden="true">
+          <svg viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg">
+            <rect width="60" height="40" fill="#003399"/>
+            <g fill="#FFCC00">
+              <circle cx="30" cy="8"  r="1.2"/>
+              <circle cx="38" cy="10" r="1.2"/>
+              <circle cx="44" cy="16" r="1.2"/>
+              <circle cx="46" cy="24" r="1.2"/>
+              <circle cx="44" cy="32" r="1.2"/>
+              <circle cx="38" cy="34" r="1.2"/>
+              <circle cx="30" cy="34" r="1.2"/>
+              <circle cx="22" cy="34" r="1.2"/>
+              <circle cx="16" cy="32" r="1.2"/>
+              <circle cx="14" cy="24" r="1.2"/>
+              <circle cx="16" cy="16" r="1.2"/>
+              <circle cx="22" cy="10" r="1.2"/>
+            </g>
+          </svg>
+        </div>
+        <p class="eu-disclaimer" data-i18n="footer.disclaimer">
+          Co-funded by the European Union. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Education and Culture Executive Agency (EACEA). Neither the European Union nor EACEA can be held responsible for them.
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p class="copyright">
+          © <span id="current-year">2026</span> Our Culture — <span data-i18n="footer.rights">All rights reserved.</span>
+        </p>
+        <p class="made-with" data-i18n="footer.made">Made with care across France, Turkey and Hungary.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+
+  <div class="lang-loader" id="lang-loader" aria-hidden="true">
+    <div class="lang-loader-ring"></div>
+  </div>
+
+  <script src="translations.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
