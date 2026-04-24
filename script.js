@@ -238,6 +238,98 @@
     });
   }
 
+  // ─── News image sliders ──────────────────────────────────
+  function initSlider(container, opts = {}) {
+    const { autoStart = true } = opts;
+    const track = container.querySelector('.news-slider-track');
+    const imgs  = track.querySelectorAll('img');
+    const dots  = container.querySelectorAll('.slider-dot');
+    const prev  = container.querySelector('.slider-prev');
+    const next  = container.querySelector('.slider-next');
+    let idx = 0;
+    let autoplay = null;
+    const total = imgs.length;
+
+    function goTo(i) {
+      idx = (i + total) % total;
+      track.style.transform = `translateX(-${idx * 100}%)`;
+      dots.forEach((d, di) => d.classList.toggle('active', di === idx));
+    }
+
+    function start() {
+      if (autoplay) return;
+      autoplay = setInterval(() => goTo(idx + 1), 5000);
+    }
+    function stop() {
+      if (autoplay) { clearInterval(autoplay); autoplay = null; }
+    }
+
+    if (prev) prev.addEventListener('click', () => goTo(idx - 1));
+    if (next) next.addEventListener('click', () => goTo(idx + 1));
+    dots.forEach((d, di) => d.addEventListener('click', () => goTo(di)));
+
+    container.addEventListener('mouseenter', stop);
+    container.addEventListener('mouseleave', () => { if (autoStart || autoplay !== null) start(); });
+
+    if (autoStart) start();
+
+    return { goTo, start, stop };
+  }
+
+  // Init card sliders (autoplay on load)
+  document.querySelectorAll('.news-slider').forEach(s => initSlider(s));
+
+  // ─── News Detail Modal ──────────────────────────────────
+  const newsOverlay = document.getElementById('news-detail-overlay');
+  const newsClose   = document.getElementById('news-detail-close');
+  const newsDetailSlider = document.getElementById('news-detail-slider');
+  let detailSliderCtrl = null;
+
+  if (newsDetailSlider) {
+    // Modal slider stays idle until the modal is opened
+    detailSliderCtrl = initSlider(newsDetailSlider, { autoStart: false });
+  }
+
+  function openNewsDetail() {
+    newsOverlay.classList.add('is-open');
+    newsOverlay.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    if (detailSliderCtrl) {
+      detailSliderCtrl.goTo(0);
+      detailSliderCtrl.start();
+    }
+  }
+
+  function closeNewsDetail() {
+    newsOverlay.classList.remove('is-open');
+    newsOverlay.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    if (detailSliderCtrl) detailSliderCtrl.stop();
+  }
+
+  const readMoreBtn = document.getElementById('news-read-more-1');
+  if (readMoreBtn) {
+    readMoreBtn.addEventListener('click', e => {
+      e.preventDefault();
+      openNewsDetail();
+    });
+  }
+
+  if (newsClose) {
+    newsClose.addEventListener('click', closeNewsDetail);
+  }
+
+  if (newsOverlay) {
+    newsOverlay.addEventListener('click', e => {
+      if (e.target === newsOverlay) closeNewsDetail();
+    });
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && newsOverlay.classList.contains('is-open')) {
+        closeNewsDetail();
+      }
+    });
+  }
+
   // ─── Init ───────────────────────────────────────────────────
   document.addEventListener('DOMContentLoaded', () => {
     setLanguage(resolveStartLang());

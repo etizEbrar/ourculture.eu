@@ -237,68 +237,95 @@
           </p>
         </header>
 
-        <div class="news-grid">
+        <div class="news-grid news-grid-single">
 
-          <article class="news-card news-card-feature">
-            <a class="news-media" href="#news">
-              <img src="https://picsum.photos/seed/ourculture-news-01/1200/800" alt="" loading="lazy" />
+          <article class="news-card news-card-feature news-card-horizontal">
+            <div class="news-media news-slider" id="news-slider-1">
+              <div class="news-slider-track">
+                <img src="images/paris-kickoff-2.jpg" alt="OURCULTURE Paris Kick-off Meeting — partners working together" loading="lazy" />
+                <img src="images/paris-kickoff-3.jpg" alt="OURCULTURE Paris Kick-off Meeting — presentation" loading="lazy" />
+                <img src="images/paris-kickoff-4.jpg" alt="OURCULTURE Paris Kick-off Meeting — agenda discussion" loading="lazy" />
+                <img src="images/paris-kickoff-5.jpg" alt="OURCULTURE Paris Kick-off Meeting — certificates" loading="lazy" />
+              </div>
+              <button class="slider-btn slider-prev" aria-label="Previous photo">‹</button>
+              <button class="slider-btn slider-next" aria-label="Next photo">›</button>
+              <div class="slider-dots" aria-hidden="true">
+                <span class="slider-dot active"></span>
+                <span class="slider-dot"></span>
+                <span class="slider-dot"></span>
+                <span class="slider-dot"></span>
+              </div>
               <span class="news-tag" data-i18n="news.cat_launch">Launch</span>
-            </a>
+            </div>
             <div class="news-body">
               <p class="news-meta">
-                <span data-i18n="news.n1_date">Spring 2026</span>
+                <span data-i18n="news.n1_date">13–14 November 2025</span>
                 <span class="news-dot" aria-hidden="true">•</span>
                 <span data-i18n="news.n1_place">Paris, France</span>
               </p>
-              <h3 class="news-title" data-i18n="news.n1_title">Our Culture officially kicks off in Paris</h3>
+              <h3 class="news-title" data-i18n="news.n1_title">OURCULTURE Kick-off in Paris</h3>
               <p class="news-excerpt" data-i18n="news.n1_text">
-                Partners from France, Turkey and Hungary meet to share their vision and set the creative direction for the project's first year together.
+                On 13–14 November 2025, our European consortium came together in Paris to launch OURCULTURE — a project empowering youth with digital skills, media literacy and creative storytelling to celebrate and preserve cultural heritage.
               </p>
-              <a href="#news" class="news-link" data-i18n="news.read_more">Read more →</a>
-            </div>
-          </article>
-
-          <article class="news-card">
-            <a class="news-media" href="#news">
-              <img src="https://picsum.photos/seed/ourculture-news-02/900/600" alt="" loading="lazy" />
-              <span class="news-tag news-tag-2" data-i18n="news.cat_voices">Voices</span>
-            </a>
-            <div class="news-body">
-              <p class="news-meta">
-                <span data-i18n="news.n2_date">Upcoming</span>
-                <span class="news-dot" aria-hidden="true">•</span>
-                <span data-i18n="news.n2_place">Mersin, Türkiye</span>
-              </p>
-              <h3 class="news-title" data-i18n="news.n2_title">Young voices from the Mediterranean</h3>
-              <p class="news-excerpt" data-i18n="news.n2_text">
-                Young participants explore how the sea, the city and their families have shaped their cultural identity.
-              </p>
-              <a href="#news" class="news-link" data-i18n="news.read_more">Read more →</a>
-            </div>
-          </article>
-
-          <article class="news-card">
-            <a class="news-media" href="#news">
-              <img src="https://picsum.photos/seed/ourculture-news-03/900/600" alt="" loading="lazy" />
-              <span class="news-tag news-tag-3" data-i18n="news.cat_workshop">Workshop</span>
-            </a>
-            <div class="news-body">
-              <p class="news-meta">
-                <span data-i18n="news.n3_date">Soon</span>
-                <span class="news-dot" aria-hidden="true">•</span>
-                <span data-i18n="news.n3_place">Budapest, Hungary</span>
-              </p>
-              <h3 class="news-title" data-i18n="news.n3_title">Digital storytelling workshops in Budapest</h3>
-              <p class="news-excerpt" data-i18n="news.n3_text">
-                A creative week of podcasting, photography and storytelling inspired by Hungarian heritage and youth culture.
-              </p>
-              <a href="#news" class="news-link" data-i18n="news.read_more">Read more →</a>
+              <ul class="news-highlights">
+                <li data-i18n="news.n1_h1">✅ Shared management and communication tools adopted</li>
+                <li data-i18n="news.n1_h2">✅ Risk Management and Ethics plans confirmed</li>
+                <li data-i18n="news.n1_h3">✅ Roadmap milestones set for the Action Guide</li>
+              </ul>
+              <button class="news-link news-read-more" id="news-read-more-1" data-i18n="news.read_more">Read more →</button>
             </div>
           </article>
 
         </div>
       </div>
     </section>
+
+    <!-- NEWS DETAIL MODAL -->
+    <div class="news-detail-overlay" id="news-detail-overlay" aria-hidden="true">
+      <div class="news-detail-modal" role="dialog" aria-labelledby="news-detail-title">
+        <button class="news-detail-close" id="news-detail-close" aria-label="Close">✕</button>
+
+        <div class="news-detail-slider" id="news-detail-slider">
+          <div class="news-slider-track">
+            <img src="images/paris-kickoff-2.jpg" alt="Partners working together" />
+            <img src="images/paris-kickoff-3.jpg" alt="Presentation session" />
+            <img src="images/paris-kickoff-4.jpg" alt="Agenda discussion" />
+            <img src="images/paris-kickoff-5.jpg" alt="Certificate ceremony" />
+          </div>
+          <button class="slider-btn slider-prev" aria-label="Previous photo">‹</button>
+          <button class="slider-btn slider-next" aria-label="Next photo">›</button>
+          <div class="slider-dots" aria-hidden="true">
+            <span class="slider-dot active"></span>
+            <span class="slider-dot"></span>
+            <span class="slider-dot"></span>
+            <span class="slider-dot"></span>
+          </div>
+        </div>
+
+        <div class="news-detail-content">
+          <p class="news-meta">
+            <span data-i18n="news.n1_date">13–14 November 2025</span>
+            <span class="news-dot" aria-hidden="true">•</span>
+            <span data-i18n="news.n1_place">Paris, France</span>
+          </p>
+          <h2 class="news-detail-title" id="news-detail-title" data-i18n="news.n1_title">OURCULTURE Kick-off in Paris</h2>
+          <p data-i18n="news.n1_detail">
+            On 13–14 November 2025, our European consortium came together in Paris to launch OURCULTURE — a project co-funded by the European Union (2025-1-FR02-KA210-YOU-000360078) empowering youth with digital skills, media literacy and creative storytelling to celebrate and preserve cultural heritage.
+          </p>
+          <p data-i18n="news.n1_detail2">
+            During this first transnational meeting, partners from France, Turkey and Hungary gathered to align on the project's shared vision, define the management and communication framework, and set the creative direction for the months ahead.
+          </p>
+          <ul class="news-highlights">
+            <li data-i18n="news.n1_h1">✅ Shared management and communication tools adopted</li>
+            <li data-i18n="news.n1_h2">✅ Risk Management and Ethics plans confirmed</li>
+            <li data-i18n="news.n1_h3">✅ Roadmap milestones set for the Action Guide</li>
+          </ul>
+          <p data-i18n="news.n1_detail3">
+            The Our Culture project empowers young people across Europe with digital literacy, media skills and creative storytelling to celebrate and preserve cultural heritage. Stay tuned for more updates as we move forward together!
+          </p>
+        </div>
+      </div>
+    </div>
 
     <!-- ══════════════════════════════════════════════════════════
          DIGITAL EXHIBITION PLATFORM — FEATURED
@@ -505,21 +532,28 @@
 
           <ul class="contact-list">
             <li>
-              <span class="contact-key" data-i18n="contact.email_label">Email</span>
-              <a href="mailto:hello@ourculture.eu">hello@ourculture.eu</a>
+              <span class="contact-key" data-i18n="contact.coordinator_label">Project Coordinator</span>
+              <span class="contact-org">eutopique — France</span>
+            </li>
+            <li class="contact-person-card">
+              <div class="contact-person">
+                <span class="contact-person-name">Laurence BERTEA-GRANET</span>
+                <span class="contact-person-role" data-i18n="contact.cofounder">Co-founder</span>
+              </div>
+              <a href="mailto:laurence@eutopique.com">laurence@eutopique.com</a>
+              <a href="tel:+33683588714">06 83 58 87 14</a>
+            </li>
+            <li class="contact-person-card">
+              <div class="contact-person">
+                <span class="contact-person-name">Aliénor MARTAUD</span>
+                <span class="contact-person-role" data-i18n="contact.cofounder">Co-founder</span>
+              </div>
+              <a href="mailto:alienor@eutopique.com">alienor@eutopique.com</a>
+              <a href="tel:+33646011046">06 46 01 10 46</a>
             </li>
             <li>
               <span class="contact-key" data-i18n="contact.website_label">Website</span>
               <a href="https://ourculture.eu">ourculture.eu</a>
-            </li>
-            <li>
-              <span class="contact-key" data-i18n="contact.follow_label">Follow</span>
-              <span class="social-row">
-                <a href="#" aria-label="Instagram" class="social-link">IG</a>
-                <a href="#" aria-label="Facebook"  class="social-link">FB</a>
-                <a href="#" aria-label="LinkedIn"  class="social-link">in</a>
-                <a href="#" aria-label="YouTube"   class="social-link">YT</a>
-              </span>
             </li>
           </ul>
         </div>
