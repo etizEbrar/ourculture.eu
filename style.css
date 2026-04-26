@@ -1424,9 +1424,11 @@ ul { padding: 0; margin: 0; list-style: none; }
 .section-contact { background: #fff; }
 .contact-grid {
   display: grid;
-  grid-template-columns: 1fr 1.1fr;
+  grid-template-columns: 1fr;
   gap: clamp(2rem, 5vw, 4rem);
   align-items: start;
+  max-width: 680px;
+  margin-inline: auto;
 }
 .contact-intro .section-tag { margin-top: 0; }
 .contact-intro .section-title,
