@@ -99,16 +99,19 @@ const translations = {
       lead: "Our Culture is built by a small consortium of organisations who share a belief in the power of youth, culture and collaboration.",
       p1_country: "France",
       p1_name: "eutopique",
-      p1_desc: "A French non-profit working at the intersection of education, creativity and social innovation, with a focus on meaningful learning experiences for young people.",
+      p1_desc: "A French non-profit fostering positive educational transitions through design thinking, ethnographic research and collective intelligence. eutopique empowers children and young people aged 7–30 around cultural heritage, sustainability and digital transformation.",
       p1_role: "Coordinator",
+      p1_link_label: "Visit website",
       p2_country: "Turkey",
       p2_name: "Akdeniz Panorama Derneği",
-      p2_desc: "A Turkish association promoting education, inclusion and cultural dialogue, with a strong interest in media, environment and youth engagement.",
+      p2_desc: "A Turkish non-profit founded in 2021 that promotes education, media literacy, gender equality, environmental sustainability and social entrepreneurship. Akdeniz Panorama works with children, young people and adults, with a special focus on those from disadvantaged backgrounds.",
       p2_role: "Partner",
+      p2_link_label: "Visit website",
       p3_country: "Hungary",
       p3_name: "Fiatalok Egységben Egyesület",
-      p3_desc: "A Hungarian youth association fostering intercultural understanding, active participation and creative youth work across Europe.",
-      p3_role: "Partner"
+      p3_desc: "A Hungarian youth association promoting intercultural understanding, youth empowerment and digital transformation. Youth Together Association fosters civic participation, creative expression and youth-led international cooperation.",
+      p3_role: "Partner",
+      p3_link_label: "Visit Facebook page"
     },
 
     resources: {
@@ -257,16 +260,19 @@ const translations = {
       lead: "Our Culture réunit un petit consortium d'organisations qui croient au pouvoir de la jeunesse, de la culture et de la coopération.",
       p1_country: "France",
       p1_name: "eutopique",
-      p1_desc: "Une association française à la croisée de l'éducation, de la créativité et de l'innovation sociale, centrée sur des expériences d'apprentissage porteuses de sens pour les jeunes.",
+      p1_desc: "Association française qui accompagne les transitions éducatives positives à travers le design thinking, la recherche ethnographique et l'intelligence collective. eutopique soutient les enfants et les jeunes de 7 à 30 ans autour du patrimoine culturel, de la durabilité et de la transformation numérique.",
       p1_role: "Coordinateur",
+      p1_link_label: "Voir le site",
       p2_country: "Turquie",
       p2_name: "Akdeniz Panorama Derneği",
-      p2_desc: "Une association turque qui promeut l'éducation, l'inclusion et le dialogue culturel, avec un intérêt marqué pour les médias, l'environnement et la participation des jeunes.",
+      p2_desc: "Association turque à but non lucratif fondée en 2021, qui promeut l'éducation, l'éducation aux médias, l'égalité des genres, la durabilité environnementale et l'entrepreneuriat social. Akdeniz Panorama accompagne enfants, jeunes et adultes, avec une attention particulière aux publics défavorisés.",
       p2_role: "Partenaire",
+      p2_link_label: "Voir le site",
       p3_country: "Hongrie",
       p3_name: "Fiatalok Egységben Egyesület",
-      p3_desc: "Une association hongroise de jeunesse qui favorise la compréhension interculturelle, la participation active et le travail de jeunesse créatif en Europe.",
-      p3_role: "Partenaire"
+      p3_desc: "Association hongroise de jeunesse qui promeut la compréhension interculturelle, l'autonomisation des jeunes et la transformation numérique. Youth Together Association encourage la participation citoyenne, l'expression créative et la coopération internationale portée par les jeunes.",
+      p3_role: "Partenaire",
+      p3_link_label: "Voir la page Facebook"
     },
 
     resources: {
@@ -415,16 +421,19 @@ const translations = {
       lead: "Our Culture; gençliğin, kültürün ve işbirliğinin gücüne inanan küçük bir kuruluşlar konsorsiyumu tarafından hayata geçiriliyor.",
       p1_country: "Fransa",
       p1_name: "eutopique",
-      p1_desc: "Eğitim, yaratıcılık ve sosyal yenilik kesişiminde çalışan; gençler için anlamlı öğrenme deneyimlerine odaklanan Fransız bir sivil toplum kuruluşu.",
+      p1_desc: "Tasarım odaklı düşünme, etnografik araştırma ve kolektif zeka yöntemleriyle olumlu eğitsel geçişleri destekleyen Fransız bir sivil toplum kuruluşu. eutopique; 7–30 yaş arası çocuk ve gençleri kültürel miras, sürdürülebilirlik ve dijital dönüşüm temaları etrafında güçlendiriyor.",
       p1_role: "Koordinatör",
+      p1_link_label: "Web sitesini ziyaret et",
       p2_country: "Türkiye",
       p2_name: "Akdeniz Panorama Derneği",
-      p2_desc: "Eğitimi, kapsayıcılığı ve kültürel diyaloğu destekleyen; medya, çevre ve gençlik katılımına güçlü ilgi duyan bir Türk derneği.",
+      p2_desc: "2021'de kurulmuş; eğitimi, medya okuryazarlığını, toplumsal cinsiyet eşitliğini, çevresel sürdürülebilirliği ve sosyal girişimciliği destekleyen Türk bir sivil toplum kuruluşu. Akdeniz Panorama; özellikle dezavantajlı gruplara odaklanarak çocuklar, gençler ve yetişkinlerle çalışıyor.",
       p2_role: "Ortak",
+      p2_link_label: "Web sitesini ziyaret et",
       p3_country: "Macaristan",
       p3_name: "Fiatalok Egységben Egyesület",
-      p3_desc: "Kültürlerarası anlayışı, etkin katılımı ve yaratıcı gençlik çalışmalarını Avrupa ölçeğinde destekleyen bir Macar gençlik derneği.",
-      p3_role: "Ortak"
+      p3_desc: "Kültürlerarası anlayışı, gençlerin güçlenmesini ve dijital dönüşümü destekleyen Macar bir gençlik derneği. Youth Together Association; aktif vatandaşlığı, yaratıcı ifadeyi ve gençlik öncülüğündeki uluslararası işbirliklerini teşvik ediyor.",
+      p3_role: "Ortak",
+      p3_link_label: "Facebook sayfasını ziyaret et"
     },
 
     resources: {
@@ -573,16 +582,19 @@ const translations = {
       lead: "Az Our Culture-t olyan szervezetek kis konzorciuma építi, amelyek hisznek az ifjúság, a kultúra és az együttműködés erejében.",
       p1_country: "Franciaország",
       p1_name: "eutopique",
-      p1_desc: "Francia civil szervezet az oktatás, a kreativitás és a társadalmi innováció találkozásánál, különös figyelemmel a fiatalok számára értelmes tanulási élményekre.",
+      p1_desc: "Francia civil szervezet, amely a pozitív oktatási átmeneteket támogatja a design thinking, az etnográfiai kutatás és a kollektív intelligencia eszközeivel. Az eutopique 7–30 éves gyerekeket és fiatalokat erősít a kulturális örökség, a fenntarthatóság és a digitális átalakulás témáiban.",
       p1_role: "Koordinátor",
+      p1_link_label: "Honlap megtekintése",
       p2_country: "Törökország",
       p2_name: "Akdeniz Panorama Derneği",
-      p2_desc: "Török civil szervezet, amely az oktatást, az inklúziót és a kulturális párbeszédet támogatja; kiemelten érdeklődik a média, a környezet és az ifjúsági részvétel iránt.",
+      p2_desc: "2021-ben alapított török civil szervezet, amely az oktatást, a médiaírástudatosságot, a nemek közötti egyenlőséget, a környezeti fenntarthatóságot és a társadalmi vállalkozást támogatja. Az Akdeniz Panorama gyermekekkel, fiatalokkal és felnőttekkel dolgozik, különös figyelmet fordítva a hátrányos helyzetűekre.",
       p2_role: "Partner",
+      p2_link_label: "Honlap megtekintése",
       p3_country: "Magyarország",
       p3_name: "Fiatalok Egységben Egyesület",
-      p3_desc: "Magyar ifjúsági szervezet, amely a kultúrák közötti megértést, az aktív részvételt és a kreatív ifjúsági munkát támogatja Európa-szerte.",
-      p3_role: "Partner"
+      p3_desc: "Magyar ifjúsági szervezet, amely a kultúrák közötti megértést, az ifjúság megerősítését és a digitális átalakulást támogatja. A Youth Together Association ösztönzi az aktív állampolgárságot, a kreatív kifejezést és a fiatalok által vezetett nemzetközi együttműködést.",
+      p3_role: "Partner",
+      p3_link_label: "Facebook-oldal megtekintése"
     },
 
     resources: {
