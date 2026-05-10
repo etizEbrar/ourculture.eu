@@ -19,15 +19,42 @@
   <a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to main content</a>
 
   <!-- ══════════════════════════════════════════════════════════
-       TOP BAR (thin utility strip)
+       SHARED SVG SPRITE — proper EU flag (12 yellow stars)
+       referenced via <use href="#icon-eu-flag"/> in top bar + footer
   ══════════════════════════════════════════════════════════ -->
-  <div class="topbar">
+  <svg class="svg-sprite" width="0" height="0" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <symbol id="icon-eu-flag" viewBox="0 0 60 40">
+        <rect width="60" height="40" fill="#003399"/>
+        <g fill="#FFCC00">
+          <polygon transform="translate(30 6.667)"    points="0,-2.22 0.5,-0.687 2.111,-0.686 0.808,0.263 1.305,1.796 0,0.85 -1.305,1.796 -0.808,0.263 -2.111,-0.686 -0.5,-0.687"/>
+          <polygon transform="translate(36.667 8.453)" points="0,-2.22 0.5,-0.687 2.111,-0.686 0.808,0.263 1.305,1.796 0,0.85 -1.305,1.796 -0.808,0.263 -2.111,-0.686 -0.5,-0.687"/>
+          <polygon transform="translate(41.547 13.333)" points="0,-2.22 0.5,-0.687 2.111,-0.686 0.808,0.263 1.305,1.796 0,0.85 -1.305,1.796 -0.808,0.263 -2.111,-0.686 -0.5,-0.687"/>
+          <polygon transform="translate(43.333 20)"    points="0,-2.22 0.5,-0.687 2.111,-0.686 0.808,0.263 1.305,1.796 0,0.85 -1.305,1.796 -0.808,0.263 -2.111,-0.686 -0.5,-0.687"/>
+          <polygon transform="translate(41.547 26.667)" points="0,-2.22 0.5,-0.687 2.111,-0.686 0.808,0.263 1.305,1.796 0,0.85 -1.305,1.796 -0.808,0.263 -2.111,-0.686 -0.5,-0.687"/>
+          <polygon transform="translate(36.667 31.547)" points="0,-2.22 0.5,-0.687 2.111,-0.686 0.808,0.263 1.305,1.796 0,0.85 -1.305,1.796 -0.808,0.263 -2.111,-0.686 -0.5,-0.687"/>
+          <polygon transform="translate(30 33.333)"    points="0,-2.22 0.5,-0.687 2.111,-0.686 0.808,0.263 1.305,1.796 0,0.85 -1.305,1.796 -0.808,0.263 -2.111,-0.686 -0.5,-0.687"/>
+          <polygon transform="translate(23.333 31.547)" points="0,-2.22 0.5,-0.687 2.111,-0.686 0.808,0.263 1.305,1.796 0,0.85 -1.305,1.796 -0.808,0.263 -2.111,-0.686 -0.5,-0.687"/>
+          <polygon transform="translate(18.453 26.667)" points="0,-2.22 0.5,-0.687 2.111,-0.686 0.808,0.263 1.305,1.796 0,0.85 -1.305,1.796 -0.808,0.263 -2.111,-0.686 -0.5,-0.687"/>
+          <polygon transform="translate(16.667 20)"    points="0,-2.22 0.5,-0.687 2.111,-0.686 0.808,0.263 1.305,1.796 0,0.85 -1.305,1.796 -0.808,0.263 -2.111,-0.686 -0.5,-0.687"/>
+          <polygon transform="translate(18.453 13.333)" points="0,-2.22 0.5,-0.687 2.111,-0.686 0.808,0.263 1.305,1.796 0,0.85 -1.305,1.796 -0.808,0.263 -2.111,-0.686 -0.5,-0.687"/>
+          <polygon transform="translate(23.333 8.453)" points="0,-2.22 0.5,-0.687 2.111,-0.686 0.808,0.263 1.305,1.796 0,0.85 -1.305,1.796 -0.808,0.263 -2.111,-0.686 -0.5,-0.687"/>
+        </g>
+      </symbol>
+    </defs>
+  </svg>
+
+  <!-- ══════════════════════════════════════════════════════════
+       TOP DISCLAIMER BAR — EU funding notice (full disclaimer)
+  ══════════════════════════════════════════════════════════ -->
+  <div class="topbar" role="region" aria-label="EU funding disclaimer">
     <div class="topbar-inner">
-      <span class="topbar-item">
-        <span class="topbar-dot" aria-hidden="true"></span>
-        <span data-i18n="topbar.funded">Co-funded by the European Union</span>
+      <span class="topbar-flag" aria-hidden="true">
+        <svg viewBox="0 0 60 40" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg"><use href="#icon-eu-flag"/></svg>
       </span>
-      <span class="topbar-item topbar-right" data-i18n="topbar.tagline">Youth · Culture · Digital learning</span>
+      <p class="topbar-text" data-i18n="footer.disclaimer">
+        Co-funded by the European Union. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Education and Culture Executive Agency (EACEA). Neither the European Union nor EACEA can be held responsible for them.
+      </p>
     </div>
   </div>
 
@@ -136,6 +163,24 @@
         </dl>
       </div>
     </section>
+
+    <!--
+      ════════════════════════════════════════════════════════════
+      PENDING — Project teaser video (Xavier Granet)
+      When the file is delivered, integrate it here as a "Watch the teaser"
+      section between the hero and the About snapshot. Suggested markup:
+
+      <section class="teaser" aria-label="Project teaser">
+        <div class="container">
+          <video class="teaser-video" controls poster="images/teaser-poster.jpg" preload="metadata">
+            <source src="media/ourculture-teaser.mp4" type="video/mp4"/>
+          </video>
+        </div>
+      </section>
+
+      Alternative: a play-button overlay opening a lightbox/modal player.
+      ════════════════════════════════════════════════════════════
+    -->
 
     <!-- ══════════════════════════════════════════════════════════
          INTRO / ABOUT SNAPSHOT
@@ -447,6 +492,24 @@
           </article>
 
         </div>
+
+        <!--
+          ────────────────────────────────────────────────────────
+          PENDING — Associate / local partners
+          To be added when materials are confirmed:
+            • CNAM (Conservatoire national des arts et métiers)
+            • Des Moines et des Robots
+          Suggested markup once ready:
+            <div class="associate-partners">
+              <h3 class="associate-title" data-i18n="partnership.associate_title">Associate partners</h3>
+              <ul class="associate-grid">
+                <li><img src="images/logo-cnam.png" alt="CNAM"/></li>
+                <li><img src="images/logo-desmoinesetdesrobots.png" alt="Des Moines et des Robots"/></li>
+              </ul>
+            </div>
+          ────────────────────────────────────────────────────────
+        -->
+
       </div>
     </section>
 
@@ -503,6 +566,26 @@
               <span class="resource-status" data-i18n="resources.coming_soon">Coming soon</span>
             </div>
           </article>
+
+          <!--
+            ──────────────────────────────────────────────────────
+            PENDING — Needs Analysis Report
+            Once the focus group + desk research synthesis is finalised,
+            replace this comment with a real resource-card pointing to the PDF
+            (e.g. files/needs-analysis-report.pdf). Suggested structure:
+
+            <article class="resource-card">
+              <div class="resource-media" style="background-image:url('images/resource-needs-analysis.jpg')"></div>
+              <div class="resource-body">
+                <span class="resource-icon" aria-hidden="true">📊</span>
+                <h3 class="resource-title" data-i18n="resources.r5_title">Needs Analysis Report</h3>
+                <p class="resource-text" data-i18n="resources.r5_text">Findings from focus groups and desk research with youth and youth workers.</p>
+                <a class="resource-status" href="files/needs-analysis-report.pdf" target="_blank" rel="noopener">Download PDF</a>
+              </div>
+            </article>
+            ──────────────────────────────────────────────────────
+          -->
+
         </div>
       </div>
     </section>
@@ -536,11 +619,11 @@
             </li>
             <li class="contact-person-card">
               <div class="contact-person">
-                <span class="contact-person-name">Aliénor MARTAUD</span>
+                <span class="contact-person-name">Elodie Perreau</span>
                 <span class="contact-person-role" data-i18n="contact.cofounder">Co-founder</span>
               </div>
-              <a href="mailto:alienor@eutopique.com">alienor@eutopique.com</a>
-              <a href="tel:+33646011046">06 46 01 10 46</a>
+              <a href="mailto:elodie@eutopique.com">elodie@eutopique.com</a>
+              <a href="tel:+33607064602">06 07 06 46 02</a>
             </li>
             <li>
               <span class="contact-key" data-i18n="contact.website_label">Website</span>
@@ -603,23 +686,7 @@
     <div class="footer-eu">
       <div class="container footer-eu-inner">
         <div class="eu-flag" aria-hidden="true">
-          <svg viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg">
-            <rect width="60" height="40" fill="#003399"/>
-            <g fill="#FFCC00">
-              <circle cx="30" cy="8"  r="1.2"/>
-              <circle cx="38" cy="10" r="1.2"/>
-              <circle cx="44" cy="16" r="1.2"/>
-              <circle cx="46" cy="24" r="1.2"/>
-              <circle cx="44" cy="32" r="1.2"/>
-              <circle cx="38" cy="34" r="1.2"/>
-              <circle cx="30" cy="34" r="1.2"/>
-              <circle cx="22" cy="34" r="1.2"/>
-              <circle cx="16" cy="32" r="1.2"/>
-              <circle cx="14" cy="24" r="1.2"/>
-              <circle cx="16" cy="16" r="1.2"/>
-              <circle cx="22" cy="10" r="1.2"/>
-            </g>
-          </svg>
+          <svg viewBox="0 0 60 40" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg"><use href="#icon-eu-flag"/></svg>
         </div>
         <p class="eu-disclaimer" data-i18n="footer.disclaimer">
           Co-funded by the European Union. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Education and Culture Executive Agency (EACEA). Neither the European Union nor EACEA can be held responsible for them.

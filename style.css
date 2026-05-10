@@ -182,30 +182,53 @@ ul { padding: 0; margin: 0; list-style: none; }
 .btn-block { width: 100%; }
 
 /* ═══════════════════════════════════════════════════════════
-   TOP UTILITY BAR
+   SHARED SVG SPRITE (off-screen)
+═══════════════════════════════════════════════════════════ */
+.svg-sprite {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   TOP DISCLAIMER BAR — slim EU funding notice
 ═══════════════════════════════════════════════════════════ */
 .topbar {
   background: var(--color-navy-deep);
-  color: rgba(255, 255, 255, .82);
-  font-size: .78rem;
+  color: rgba(255, 255, 255, .85);
+  font-size: .74rem;
+  border-bottom: 1px solid rgba(255, 255, 255, .08);
 }
 .topbar-inner {
   max-width: var(--container-max);
   margin-inline: auto;
-  padding: .45rem clamp(1rem, 4vw, 2.5rem);
+  padding: .6rem clamp(1rem, 4vw, 2.5rem);
   display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-  flex-wrap: wrap;
+  align-items: center;
+  gap: .85rem;
 }
-.topbar-item { display: inline-flex; align-items: center; gap: .5rem; }
-.topbar-dot {
-  width: 8px; height: 8px;
-  background: var(--color-orange);
-  border-radius: 50%;
-  box-shadow: 0 0 0 4px rgba(227, 118, 37, .2);
+.topbar-flag {
+  flex-shrink: 0;
+  display: inline-block;
+  width: 28px;
+  height: 18.67px;          /* 3:2 aspect ratio */
+  border-radius: 2px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .25);
+  background: #003399;       /* fallback if SVG fails */
 }
-.topbar-right { color: rgba(255, 255, 255, .65); letter-spacing: .14em; text-transform: uppercase; font-size: .7rem; }
+.topbar-flag svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.topbar-text {
+  margin: 0;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, .82);
+  font-size: inherit;
+}
 
 /* ═══════════════════════════════════════════════════════════
    HEADER
