@@ -279,54 +279,60 @@
   // Init card sliders (autoplay on load)
   document.querySelectorAll('.news-slider').forEach(s => initSlider(s));
 
-  // ─── News Detail Modal ──────────────────────────────────
-  const newsOverlay = document.getElementById('news-detail-overlay');
-  const newsClose   = document.getElementById('news-detail-close');
-  const newsDetailSlider = document.getElementById('news-detail-slider');
-  let detailSliderCtrl = null;
+  // ─── News Detail Modals ─────────────────────────────────
+  // One overlay per news story; each read-more button points at its own
+  // overlay via data-news-modal. Modal sliders stay idle until opened.
+  const newsOverlays = document.querySelectorAll('.news-detail-overlay');
+  const detailSliders = new Map();
 
-  if (newsDetailSlider) {
-    // Modal slider stays idle until the modal is opened
-    detailSliderCtrl = initSlider(newsDetailSlider, { autoStart: false });
-  }
-
-  function openNewsDetail() {
-    newsOverlay.classList.add('is-open');
-    newsOverlay.setAttribute('aria-hidden', 'false');
+  function openNewsDetail(overlay) {
+    overlay.classList.add('is-open');
+    overlay.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
-    if (detailSliderCtrl) {
-      detailSliderCtrl.goTo(0);
-      detailSliderCtrl.start();
+    const ctrl = detailSliders.get(overlay);
+    if (ctrl) {
+      ctrl.goTo(0);
+      ctrl.start();
     }
   }
 
-  function closeNewsDetail() {
-    newsOverlay.classList.remove('is-open');
-    newsOverlay.setAttribute('aria-hidden', 'true');
+  function closeNewsDetail(overlay) {
+    overlay.classList.remove('is-open');
+    overlay.setAttribute('aria-hidden', 'true');
     document.body.style.overflow = '';
-    if (detailSliderCtrl) detailSliderCtrl.stop();
+    const ctrl = detailSliders.get(overlay);
+    if (ctrl) ctrl.stop();
   }
 
-  const readMoreBtn = document.getElementById('news-read-more-1');
-  if (readMoreBtn) {
-    readMoreBtn.addEventListener('click', e => {
+  newsOverlays.forEach(overlay => {
+    const slider = overlay.querySelector('.news-detail-slider');
+    if (slider) detailSliders.set(overlay, initSlider(slider, { autoStart: false }));
+
+    overlay.querySelectorAll('.news-detail-close').forEach(btn => {
+      btn.addEventListener('click', () => closeNewsDetail(overlay));
+    });
+
+    overlay.addEventListener('click', e => {
+      if (e.target === overlay) closeNewsDetail(overlay);
+    });
+  });
+
+  document.querySelectorAll('.news-read-more').forEach(btn => {
+    const target  = btn.getAttribute('data-news-modal');
+    const overlay = target ? document.querySelector(target) : null;
+    if (!overlay) return;
+    btn.addEventListener('click', e => {
       e.preventDefault();
-      openNewsDetail();
+      openNewsDetail(overlay);
     });
-  }
+  });
 
-  if (newsClose) {
-    newsClose.addEventListener('click', closeNewsDetail);
-  }
-
-  if (newsOverlay) {
-    newsOverlay.addEventListener('click', e => {
-      if (e.target === newsOverlay) closeNewsDetail();
-    });
+  if (newsOverlays.length) {
     document.addEventListener('keydown', e => {
-      if (e.key === 'Escape' && newsOverlay.classList.contains('is-open')) {
-        closeNewsDetail();
-      }
+      if (e.key !== 'Escape') return;
+      newsOverlays.forEach(overlay => {
+        if (overlay.classList.contains('is-open')) closeNewsDetail(overlay);
+      });
     });
   }
 
