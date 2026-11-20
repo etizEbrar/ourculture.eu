@@ -1426,6 +1426,21 @@ ul { padding: 0; margin: 0; list-style: none; }
   margin-top: auto;
   align-self: center;
 }
+.resource-status-live {
+  color: #1f7a4d;
+  background: rgba(31, 122, 77, .1);
+}
+.resource-actions {
+  display: flex;
+  gap: .5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: .6rem;
+}
+.btn-sm {
+  padding: .55rem 1.1rem;
+  font-size: .85rem;
+}
 
 /* ═══════════════════════════════════════════════════════════
    JOIN / NEWSLETTER BAND

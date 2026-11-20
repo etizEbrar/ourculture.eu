@@ -1,0 +1,38 @@
+GUIDE OURCULTURE - VERSION DIGITALE (EN + FR) - mise à jour du 20/11/2026
+=========================================================================
+
+Contenu
+- /            version anglaise (source : PDF EN 153 p., export Canva du 10/11/2026)
+- /fr/         version française (source : PDF FR 149 p., export Canva du 16/11/2026)
+- /assets/     logos, polices, illustrations, fiches d'activités et infographies EN
+- /fr/assets/  fiches d'activités, infographies et pages FR
+- style.css    feuille de style commune (EN et FR)
+- search-index.js et fr/search-index.js : index de la recherche (loupe en haut à droite)
+- assets/downloads/ et fr/assets/downloads/ : toutes les fiches d'activité (1 PDF + ZIP),
+  les 5 infographies (1 PDF) et le pack complet (ZIP), proposés sur la page d'accueil
+
+Mise en ligne sur ourculture.eu (GitHub Pages)
+1. Copier tout le dossier « guide » à la racine du dépôt du site ourculture.eu.
+   Adresses obtenues :
+     https://www.ourculture.eu/guide/      (anglais)
+     https://www.ourculture.eu/guide/fr/   (français)
+2. Le site n'utilise que des liens relatifs : il peut être placé dans un autre
+   dossier sans rien casser. Seules les balises <link rel="alternate" hreflang>
+   (référencement) contiennent l'adresse complète /guide/.
+3. Ajouter un lien vers /guide/ (et /guide/fr/) dans la section « Resources »
+   de la page d'accueil d'ourculture.eu.
+4. Les téléchargements complémentaires (conseils d'animation, liste de sécurité,
+   formulaires d'autorisation, cartes d'entretien, rapport global) pointent vers
+   https://www.ourculture.eu/downloads/... : ces fichiers sont déjà en ligne.
+
+Ancienne version (eutopique.com/ourculture/)
+- Elle peut être remplacée par une redirection vers https://www.ourculture.eu/guide/.
+- chapter-2-activity-9.html est une page de redirection vers chapter-2-activity-8.html
+  (le chapitre 2 compte désormais 8 activités).
+
+Ajouter une langue plus tard (hongrois, turc…)
+- Déposer le nouveau dossier (ex. « hu ») dans « guide », à côté de « fr ».
+- Dans guide/assets/languages.js, retirer les // devant la ligne de la langue :
+    { code: 'hu', name: 'Magyar',  path: 'hu/' },
+  La langue apparaît alors dans le menu (globe) de toutes les pages, sans rien
+  changer aux pages anglaises et françaises.
